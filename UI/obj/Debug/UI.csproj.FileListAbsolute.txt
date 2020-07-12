@@ -1,0 +1,99 @@
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.FrmAddUser.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\bin\Debug\UI.exe.config
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\bin\Debug\UI.exe
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\bin\Debug\UI.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\bin\Debug\BL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\bin\Debug\EL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\bin\Debug\DAL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\bin\Debug\BL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\bin\Debug\EL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\bin\Debug\DAL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.exe
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.Login.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.FrmUsers.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.MainForm.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.FrmCustomers.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.FrmAddServicePlan.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.FrmServices.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.FrmEditService.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.FrmCustomerInformation.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.FrmServicesAux.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.FrmCompanyInformation.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\UI\obj\Debug\UI.FrmCustomerDevices.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\bin\Debug\UI.exe.config
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\bin\Debug\UI.exe
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\bin\Debug\UI.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\bin\Debug\BL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\bin\Debug\EL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\bin\Debug\DAL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\bin\Debug\BL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\bin\Debug\EL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\bin\Debug\DAL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmCompanyInformation.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmCustomerDevices.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmCustomerInformation.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmAddServicePlan.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmCustomers.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmAddUser.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmEditService.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmServices.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmServicesAux.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmUsers.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.Login.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.MainForm.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.exe
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmEditCustomerDevice.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmSessionCustomers.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmAddSessionCustomer.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmEditSessionCustomer.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmAddPointOfSale.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmPointsOfSale.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmEditPointOfSale.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmGenerateCodeForMikrotik.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmEquipments.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmAddEquipment.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmEditEquipment.resources
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\UI\obj\Debug\UI.FrmAbout.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\bin\Debug\UI.exe.config
+C:\Users\Alejo\Documents\MyWISPSI\UI\bin\Debug\UI.exe
+C:\Users\Alejo\Documents\MyWISPSI\UI\bin\Debug\UI.pdb
+C:\Users\Alejo\Documents\MyWISPSI\UI\bin\Debug\BL.dll
+C:\Users\Alejo\Documents\MyWISPSI\UI\bin\Debug\EL.dll
+C:\Users\Alejo\Documents\MyWISPSI\UI\bin\Debug\DAL.dll
+C:\Users\Alejo\Documents\MyWISPSI\UI\bin\Debug\BL.pdb
+C:\Users\Alejo\Documents\MyWISPSI\UI\bin\Debug\EL.pdb
+C:\Users\Alejo\Documents\MyWISPSI\UI\bin\Debug\DAL.pdb
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmAbout.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmAddEquipment.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmAddPointOfSale.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmAddSessionCustomer.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmCompanyInformation.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmCustomerDevices.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmCustomerInformation.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmAddServicePlan.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmCustomers.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmAddUser.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmEditEquipment.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmEditPointOfSale.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmEditSessionCustomer.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmEquipments.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmGenerateCodeForMikrotik.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmPointsOfSale.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmSessionCustomers.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmEditCustomerDevice.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmEditService.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmServices.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmServicesAux.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.FrmUsers.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.Login.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.MainForm.resources
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.exe
+C:\Users\Alejo\Documents\MyWISPSI\UI\obj\Debug\UI.pdb

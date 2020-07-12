@@ -1,0 +1,21 @@
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\DAL\bin\Debug\DAL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\DAL\bin\Debug\DAL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\DAL\bin\Debug\EL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\DAL\bin\Debug\EL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\DAL\obj\Debug\DAL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\DAL\obj\Debug\DAL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\DAL\bin\Debug\DAL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\DAL\bin\Debug\DAL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\DAL\bin\Debug\EL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\DAL\bin\Debug\EL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\DAL\obj\Debug\DAL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\DAL\obj\Debug\DAL.pdb
+C:\Users\Alejo\Documents\MyWISPSI\DAL\bin\Debug\DAL.dll
+C:\Users\Alejo\Documents\MyWISPSI\DAL\bin\Debug\DAL.pdb
+C:\Users\Alejo\Documents\MyWISPSI\DAL\bin\Debug\EL.dll
+C:\Users\Alejo\Documents\MyWISPSI\DAL\bin\Debug\EL.pdb
+C:\Users\Alejo\Documents\MyWISPSI\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Alejo\Documents\MyWISPSI\DAL\obj\Debug\DAL.dll
+C:\Users\Alejo\Documents\MyWISPSI\DAL\obj\Debug\DAL.pdb

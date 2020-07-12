@@ -1,0 +1,15 @@
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\EL\bin\Debug\EL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\EL\bin\Debug\EL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\EL\obj\Debug\EL.csprojResolveAssemblyReference.cache
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\EL\obj\Debug\EL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyISP\EL\obj\Debug\EL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\EL\bin\Debug\EL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\EL\bin\Debug\EL.pdb
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\EL\obj\Debug\EL.csprojResolveAssemblyReference.cache
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\EL\obj\Debug\EL.dll
+C:\Users\Alejo\Documents\SharpDevelop Projects\MyWISPSI\EL\obj\Debug\EL.pdb
+C:\Users\Alejo\Documents\MyWISPSI\EL\bin\Debug\EL.dll
+C:\Users\Alejo\Documents\MyWISPSI\EL\bin\Debug\EL.pdb
+C:\Users\Alejo\Documents\MyWISPSI\EL\obj\Debug\EL.csprojResolveAssemblyReference.cache
+C:\Users\Alejo\Documents\MyWISPSI\EL\obj\Debug\EL.dll
+C:\Users\Alejo\Documents\MyWISPSI\EL\obj\Debug\EL.pdb

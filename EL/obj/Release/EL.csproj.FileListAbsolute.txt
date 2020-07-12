@@ -1,0 +1,3 @@
+C:\Users\Alejo\Documents\MyWISPSI\EL\bin\Release\EL.dll
+C:\Users\Alejo\Documents\MyWISPSI\EL\obj\Release\EL.csprojResolveAssemblyReference.cache
+C:\Users\Alejo\Documents\MyWISPSI\EL\obj\Release\EL.dll

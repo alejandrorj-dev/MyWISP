@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{D06F84E9-9184-4107-84DD-0B04DBD588A8}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <StartupObject>UI.Program</StartupObject>
+    <ApplicationIcon>Imgs\Logo\My WISP icon 40x40.ico</ApplicationIcon>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAbout.cs" />
+    <Compile Include="FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEquipment.cs" />
+    <Compile Include="FrmAddEquipment.Designer.cs">
+      <DependentUpon>FrmAddEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddPointOfSale.cs" />
+    <Compile Include="FrmAddPointOfSale.Designer.cs">
+      <DependentUpon>FrmAddPointOfSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddSessionCustomer.cs" />
+    <Compile Include="FrmAddSessionCustomer.Designer.cs">
+      <DependentUpon>FrmAddSessionCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompanyInformation.cs" />
+    <Compile Include="FrmCompanyInformation.Designer.cs">
+      <DependentUpon>FrmCompanyInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomerDevices.cs" />
+    <Compile Include="FrmCustomerDevices.Designer.cs">
+      <DependentUpon>FrmCustomerDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomerInformation.cs" />
+    <Compile Include="FrmCustomerInformation.Designer.cs">
+      <DependentUpon>FrmCustomerInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddServicePlan.cs" />
+    <Compile Include="FrmAddServicePlan.Designer.cs">
+      <DependentUpon>FrmAddServicePlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomers.cs" />
+    <Compile Include="FrmCustomers.Designer.cs">
+      <DependentUpon>FrmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddUser.cs" />
+    <Compile Include="FrmAddUser.Designer.cs">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditEquipment.cs" />
+    <Compile Include="FrmEditEquipment.Designer.cs">
+      <DependentUpon>FrmEditEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditPointOfSale.cs" />
+    <Compile Include="FrmEditPointOfSale.Designer.cs">
+      <DependentUpon>FrmEditPointOfSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditSessionCustomer.cs" />
+    <Compile Include="FrmEditSessionCustomer.Designer.cs">
+      <DependentUpon>FrmEditSessionCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEquipments.cs" />
+    <Compile Include="FrmEquipments.Designer.cs">
+      <DependentUpon>FrmEquipments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGenerateCodeForMikrotik.cs" />
+    <Compile Include="FrmGenerateCodeForMikrotik.Designer.cs">
+      <DependentUpon>FrmGenerateCodeForMikrotik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPointsOfSale.cs" />
+    <Compile Include="FrmPointsOfSale.Designer.cs">
+      <DependentUpon>FrmPointsOfSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSessionCustomers.cs" />
+    <Compile Include="FrmSessionCustomers.Designer.cs">
+      <DependentUpon>FrmSessionCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditCustomerDevice.cs" />
+    <Compile Include="FrmEditCustomerDevice.Designer.cs">
+      <DependentUpon>FrmEditCustomerDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditService.cs" />
+    <Compile Include="FrmEditService.Designer.cs">
+      <DependentUpon>FrmEditService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmServices.cs" />
+    <Compile Include="FrmServices.Designer.cs">
+      <DependentUpon>FrmServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmServicesAux.cs" />
+    <Compile Include="FrmServicesAux.Designer.cs">
+      <DependentUpon>FrmServicesAux.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsers.cs" />
+    <Compile Include="FrmUsers.Designer.cs">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs" />
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{c637d584-dc91-4d26-8b6f-f06458f70a2d}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EL\EL.csproj">
+      <Project>{4db112b0-b077-492b-a08a-80b2f8b2e88a}</Project>
+      <Name>EL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEquipment.resx">
+      <DependentUpon>FrmAddEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddPointOfSale.resx">
+      <DependentUpon>FrmAddPointOfSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddSessionCustomer.resx">
+      <DependentUpon>FrmAddSessionCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompanyInformation.resx">
+      <DependentUpon>FrmCompanyInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomerDevices.resx">
+      <DependentUpon>FrmCustomerDevices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomerInformation.resx">
+      <DependentUpon>FrmCustomerInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddServicePlan.resx">
+      <DependentUpon>FrmAddServicePlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomers.resx">
+      <DependentUpon>FrmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddUser.resx">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditEquipment.resx">
+      <DependentUpon>FrmEditEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditPointOfSale.resx">
+      <DependentUpon>FrmEditPointOfSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditSessionCustomer.resx">
+      <DependentUpon>FrmEditSessionCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEquipments.resx">
+      <DependentUpon>FrmEquipments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenerateCodeForMikrotik.resx">
+      <DependentUpon>FrmGenerateCodeForMikrotik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPointsOfSale.resx">
+      <DependentUpon>FrmPointsOfSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSessionCustomers.resx">
+      <DependentUpon>FrmSessionCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditCustomerDevice.resx">
+      <DependentUpon>FrmEditCustomerDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditService.resx">
+      <DependentUpon>FrmEditService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmServices.resx">
+      <DependentUpon>FrmServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmServicesAux.resx">
+      <DependentUpon>FrmServicesAux.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsers.resx">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

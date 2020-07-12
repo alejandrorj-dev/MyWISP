@@ -1,0 +1,5 @@
+C:\Users\Alejo\Documents\MyWISPSI\BL\bin\Release\BL.dll
+C:\Users\Alejo\Documents\MyWISPSI\BL\bin\Release\DAL.dll
+C:\Users\Alejo\Documents\MyWISPSI\BL\bin\Release\EL.dll
+C:\Users\Alejo\Documents\MyWISPSI\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+C:\Users\Alejo\Documents\MyWISPSI\BL\obj\Release\BL.dll
