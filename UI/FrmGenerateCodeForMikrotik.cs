@@ -298,6 +298,7 @@ namespace UI
 			
 			btnGenerateExcel.Enabled = true;
 		}
+		
 		void FrmGenerateCodeForMikrotikLoad(object sender, EventArgs e)
 		{
 			LoadTimes();
@@ -402,131 +403,7 @@ namespace UI
 			}
 		}
 		
-		void GenerateVoucherCodesForExcel(List<VoucherCode> ListVoucherCodes)
-		{
-			SaveFileDialog File = new SaveFileDialog{Filter = @"Excel (*.xls)|*.xls", FileName = "pines_"+txtProfileName.Text+"__"+txtPrefix.Text};
-			
-			
-			if(File.ShowDialog() == DialogResult.OK)
-			{
-				Excel.Application ExcelApp = new Excel.Application();
-				Excel.Workbook ExcelBook = ExcelApp.Workbooks.Add();
-				Excel.Worksheet ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Sheets["Hoja1"];
-				Excel.Pictures MyLogo = (Microsoft.Office.Interop.Excel.Pictures)ExcelSheet.Pictures(System.Reflection.Missing.Value);
-				DateTime DateNow = DateTime.Now;
-				
-				Company MyCompany = CompanyBL.GetInformationCompany();
-				
-				String Logo = Convert.ToString(MyCompany.Image);
-				
-				MyLogo.Insert(Logo, ExcelSheet.Cells[1, "A"]);							
-				
-				
-				ExcelSheet.Cells[1, "C"] = MyCompany.Name + "\r\n NIT: " + MyCompany.NIT + "\r\n" + MyCompany.City + " - " + MyCompany.Department + "\r\n Telefono: " + MyCompany.Phone + "\r\n E-mail: " + MyCompany.E_mail + "\r\n" + MyCompany.Website;
-				ExcelSheet.Range["A1", "H1"].Merge();
-				ExcelSheet.Range["A1", "H1"].Font.Bold = true;
-				ExcelSheet.Range["A1", "H1"].Font.Size = 12;
-				
-				ExcelSheet.Range["A2", "H1"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				ExcelSheet.Range["A2", "H1"].VerticalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				
-				ExcelSheet.Range["A1", "H1"].RowHeight = 110;
-				ExcelSheet.Cells[2, "D"] = "Pines Generados - ["+DateNow+"]";
-				ExcelSheet.Range["A2", "H2"].Merge();
-				ExcelSheet.Range["A2", "H2"].Font.Bold = true;
-				ExcelSheet.Range["A2", "H2"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				
-				ExcelSheet.Range["A3", "D3"].Font.Bold = true;
-				ExcelSheet.Cells[3, "A"] = "Código";
-				ExcelSheet.Cells[3, "B"] = "Tiempo";
-				ExcelSheet.Cells[3, "C"] = "Nombre de Perfil";
-				ExcelSheet.Cells[3, "D"] = "Límite de Tráfico";
-
-				
-				int row = 3;
-				foreach(var vouchercode in ListVoucherCodes)
-				{
-					row++;
-					ExcelSheet.Cells[row, "A"] = vouchercode.Prefix+vouchercode.Code;
-					ExcelSheet.Cells[row, "B"] = vouchercode.Time;
-					ExcelSheet.Cells[row, "C"] = vouchercode.Profile;
-					ExcelSheet.Cells[row, "D"] = vouchercode.TrafficLimit;
-				}
-				
-				ExcelSheet.Columns.AutoFit();
-				
-				ExcelBook.SaveAs(File.FileName, Excel.XlFileFormat.xlAddIn);
-				
-				ExcelApp.Quit();
-				
-				GC.Collect();
-				
-			}
-		}
 		
-		void GenerateLoginTicketForExcel(List<LoginTicket> ListLoginTicket)
-		{
-			SaveFileDialog File = new SaveFileDialog{Filter = @"Excel (*.xls)|*.xls", FileName = "pines_usuario_y_contrasena_"+txtProfileName.Text+"__"+txtPrefix.Text};
-			
-			
-			if(File.ShowDialog() == DialogResult.OK)
-			{
-				Excel.Application ExcelApp = new Excel.Application();
-				Excel.Workbook ExcelBook = ExcelApp.Workbooks.Add();
-				Excel.Worksheet ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Sheets["Hoja1"];
-				Excel.Pictures MyLogo = (Microsoft.Office.Interop.Excel.Pictures)ExcelSheet.Pictures(System.Reflection.Missing.Value);
-				DateTime DateNow = DateTime.Now;
-				
-				Company MyCompany = CompanyBL.GetInformationCompany();
-				
-				String Logo = Convert.ToString(MyCompany.Image);
-				
-				MyLogo.Insert(Logo, ExcelSheet.Cells[1, "A"]);						
-				
-				
-				ExcelSheet.Cells[1, "C"] = MyCompany.Name + "\r\n NIT: " + MyCompany.NIT + "\r\n" + MyCompany.City + " - " + MyCompany.Department + "\r\n Telefono: " + MyCompany.Phone + "\r\n E-mail: " + MyCompany.E_mail + "\r\n" + MyCompany.Website;
-				ExcelSheet.Range["A1", "H1"].Merge();
-				ExcelSheet.Range["A1", "H1"].Font.Bold = true;
-				ExcelSheet.Range["A1", "H1"].Font.Size = 12;
-				
-				ExcelSheet.Range["A2", "H1"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				ExcelSheet.Range["A2", "H1"].VerticalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				
-				ExcelSheet.Range["A1", "H1"].RowHeight = 110;
-				ExcelSheet.Cells[2, "D"] = "Pines de Usuario & Contraseña Generados - ["+DateNow+"]";
-				ExcelSheet.Range["A2", "H2"].Merge();
-				ExcelSheet.Range["A2", "H2"].Font.Bold = true;
-				ExcelSheet.Range["A2", "H2"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				
-				ExcelSheet.Range["A3", "E3"].Font.Bold = true;
-				ExcelSheet.Cells[3, "A"] = "Usuario";
-				ExcelSheet.Cells[3, "B"] = "Contraseña";
-				ExcelSheet.Cells[3, "C"] = "Tiempo";
-				ExcelSheet.Cells[3, "D"] = "Nombre de Perfil";
-				ExcelSheet.Cells[3, "E"] = "Límite de Tráfico";
-
-				
-				int row = 3;
-				foreach(var loginticket in ListLoginTicket)
-				{
-					row++;
-					ExcelSheet.Cells[row, "A"] = loginticket.Prefix+loginticket.User;
-					ExcelSheet.Cells[row, "B"] = loginticket.Password;
-					ExcelSheet.Cells[row, "C"] = loginticket.Time;
-					ExcelSheet.Cells[row, "D"] = loginticket.Profile;
-					ExcelSheet.Cells[row, "E"] = loginticket.TrafficLimit;
-				}
-				
-				ExcelSheet.Columns.AutoFit();
-				
-				ExcelBook.SaveAs(File.FileName, Excel.XlFileFormat.xlAddIn);
-				
-				ExcelApp.Quit();
-				
-				GC.Collect();
-				
-			}
-		}
 		
 		void BtnCloseClick(object sender, EventArgs e)
 		{
@@ -544,11 +421,11 @@ namespace UI
 		{
 			if(MyListVoucherCode != null)
 			{
-				GenerateVoucherCodesForExcel(MyListVoucherCode);
+				ExcelReport.GenerateVoucherCodesForExcel(MyListVoucherCode, txtProfileName.Text, txtPrefix.Text);
 			}
 			else if(MyListLoginTicket != null)
 			{
-				GenerateLoginTicketForExcel(MyListLoginTicket);
+				ExcelReport.GenerateLoginTicketForExcel(MyListLoginTicket, txtProfileName.Text, txtPrefix.Text);
 			}
 		}
 	}

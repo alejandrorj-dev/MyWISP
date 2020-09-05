@@ -120,72 +120,8 @@ namespace UI
 		{
 			List<Service_Plan> ListServicePlan = new List<Service_Plan>();
 			ListServicePlan = Service_PlanBL.GetAllServices();
-			ExportServicesPlanExcel(ListServicePlan);
+			ExcelReport.ExportServicesPlanExcel(ListServicePlan);
 		}
-		
-		void ExportServicesPlanExcel(List<Service_Plan> ListServicesPlan)
-		{
-			SaveFileDialog File = new SaveFileDialog{Filter = @"Excel (*.xls)|*.xls", FileName = "My WISP S. I. - Planes de Servicio Registrados"};
-			
-			
-			if(File.ShowDialog() == DialogResult.OK)
-			{
-				Excel.Application ExcelApp = new Excel.Application();
-				Excel.Workbook ExcelBook = ExcelApp.Workbooks.Add();
-				Excel.Worksheet ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Sheets["Hoja1"];
-				Excel.Pictures MyLogo = (Microsoft.Office.Interop.Excel.Pictures)ExcelSheet.Pictures(System.Reflection.Missing.Value);
-				DateTime DateNow = DateTime.Now;
-				
-				Company MyCompany = CompanyBL.GetInformationCompany();
-				
-				String Logo = Convert.ToString(MyCompany.Image);
-				
-				MyLogo.Insert(Logo, ExcelSheet.Cells[1, "A"]);								
-				
-				
-				ExcelSheet.Cells[1, "C"] = MyCompany.Name + "\r\n NIT: " + MyCompany.NIT + "\r\n" + MyCompany.City + " - " + MyCompany.Department + "\r\n Telefono: " + MyCompany.Phone + "\r\n E-mail: " + MyCompany.E_mail + "\r\n" + MyCompany.Website;
-				ExcelSheet.Range["A1", "D1"].Merge();
-				ExcelSheet.Range["A1", "D1"].Font.Bold = true;
-				ExcelSheet.Range["A1", "D1"].Font.Size = 12;
-				
-				ExcelSheet.Range["A2", "D1"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				ExcelSheet.Range["A2", "D1"].VerticalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				
-				ExcelSheet.Range["A1", "D1"].RowHeight = 110;
-				
-				
-				ExcelSheet.Cells[2, "D"] = "Planes de Servicio Registrados - ["+DateNow+"]";
-				ExcelSheet.Range["A2", "D2"].Merge();
-				ExcelSheet.Range["A2", "D2"].Font.Bold = true;
-				ExcelSheet.Range["A2", "D2"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				
-				ExcelSheet.Range["A3", "D3"].Font.Bold = true;
-				ExcelSheet.Cells[3, "A"] = "Referencia";
-				ExcelSheet.Cells[3, "B"] = "Nombre del Plan";
-				ExcelSheet.Cells[3, "C"] = "Precio (CO)";
-				ExcelSheet.Cells[3, "D"] = "Descripcion";
-	
-				
-				int row = 3;
-				foreach(var serviceplan in ListServicesPlan)
-				{
-					row++;
-					ExcelSheet.Cells[row, "A"] = serviceplan.Id;
-					ExcelSheet.Cells[row, "B"] = serviceplan.Name_Plan;
-					ExcelSheet.Cells[row, "C"] = "$"+serviceplan.Price_Plan;
-					ExcelSheet.Cells[row, "D"] = serviceplan.Description;
-				}
-				
-				ExcelSheet.Columns.AutoFit();
-				
-				ExcelBook.SaveAs(File.FileName, Excel.XlFileFormat.xlAddIn);
-				
-				ExcelApp.Quit();
-				
-				GC.Collect();
-				
-			} 
-		} 
 		
 		
 	}

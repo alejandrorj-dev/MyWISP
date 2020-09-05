@@ -100,81 +100,9 @@ namespace UI
 		{
 			List<Session_Customer> ListSessionCustomers = new List<Session_Customer>();
 			ListSessionCustomers = Session_CustomerBL.GetAllSessionCustomers();
-			ExportSessionCustomersExcel(ListSessionCustomers);
+			ExcelReport.ExportSessionCustomersExcel(ListSessionCustomers);
 		}
 		
-		void ExportSessionCustomersExcel(List<Session_Customer> ListSessionCustomers)
-			{
-				SaveFileDialog File = new SaveFileDialog{Filter = @"Excel (*.xls)|*.xls", FileName = "My WISP S. I. - Clientes de Sesion Registrados"};
-				
-				
-				if(File.ShowDialog() == DialogResult.OK)
-				{
-					Excel.Application ExcelApp = new Excel.Application();
-					Excel.Workbook ExcelBook = ExcelApp.Workbooks.Add();
-					Excel.Worksheet ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Sheets["Hoja1"];
-					Excel.Pictures MyLogo = (Microsoft.Office.Interop.Excel.Pictures)ExcelSheet.Pictures(System.Reflection.Missing.Value);
-					DateTime DateNow = DateTime.Now;
-					
-					Company MyCompany = CompanyBL.GetInformationCompany();
-					
-					String Logo = Convert.ToString(MyCompany.Image);
-					
-					MyLogo.Insert(Logo, ExcelSheet.Cells[1, "A"]);								
-					
-					
-					ExcelSheet.Cells[1, "C"] = MyCompany.Name + "\r\n NIT: " + MyCompany.NIT + "\r\n" + MyCompany.City + " - " + MyCompany.Department + "\r\n Telefono: " + MyCompany.Phone + "\r\n E-mail: " + MyCompany.E_mail + "\r\n" + MyCompany.Website;
-					ExcelSheet.Range["A1", "I1"].Merge();
-					ExcelSheet.Range["A1", "I1"].Font.Bold = true;
-					ExcelSheet.Range["A1", "I1"].Font.Size = 12;
-					
-					ExcelSheet.Range["A2", "I1"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-					ExcelSheet.Range["A2", "I1"].VerticalAlignment = Excel.XlHAlign.xlHAlignCenter;
-					
-					ExcelSheet.Range["A1", "I1"].RowHeight = 110;
-					
-					
-					ExcelSheet.Cells[2, "D"] = "Listado de Clientes de Sesion Registrados - ["+DateNow+"]";
-					ExcelSheet.Range["A2", "I2"].Merge();
-					ExcelSheet.Range["A2", "I2"].Font.Bold = true;
-					ExcelSheet.Range["A2", "I2"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-					
-					ExcelSheet.Range["A3", "H3"].Font.Bold = true;
-					ExcelSheet.Cells[3, "A"] = "Identificacion";
-					ExcelSheet.Cells[3, "B"] = "Nombre Completo";
-					ExcelSheet.Cells[3, "C"] = "Telefono";
-					ExcelSheet.Cells[3, "D"] = "E-mail";
-					ExcelSheet.Cells[3, "E"] = "Usuario";
-					ExcelSheet.Cells[3, "F"] = "Password";
-					ExcelSheet.Cells[3, "G"] = "Fecha de Adquisicion";
-					ExcelSheet.Cells[3, "H"] = "Estado";
-					ExcelSheet.Cells[3, "I"] = "Observaciones";
-					
-					int row = 3;
-					foreach(var sessioncustomer in ListSessionCustomers)
-					{
-						row++;
-						ExcelSheet.Cells[row, "A"] = sessioncustomer.idSessionCustomer;
-						ExcelSheet.Cells[row, "B"] = sessioncustomer.Full_Name;
-						ExcelSheet.Cells[row, "C"] = sessioncustomer.Phone;
-						ExcelSheet.Cells[row, "D"] = sessioncustomer.E_mail;
-						ExcelSheet.Cells[row, "E"] = sessioncustomer.User_Session;
-						ExcelSheet.Cells[row, "F"] = sessioncustomer.Password_session;
-						ExcelSheet.Cells[row, "G"] = sessioncustomer.Date_aquisition;
-						ExcelSheet.Cells[row, "H"] = sessioncustomer.Status_session;
-						ExcelSheet.Cells[row, "I"] = sessioncustomer.Remarks;
-						
-					}
-					
-					ExcelSheet.Columns.AutoFit();
-					
-					ExcelBook.SaveAs(File.FileName, Excel.XlFileFormat.xlAddIn);
-					
-					ExcelApp.Quit();
-				
-					GC.Collect();
-				} 
-			}
 
 
 	}

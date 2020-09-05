@@ -130,79 +130,10 @@ namespace UI
 		{
 			List<Customer_device> ListCustomersDevicesWithCustomer = new List<Customer_device>();
 			ListCustomersDevicesWithCustomer = Customer_DeviceBL.GetCustomerDeviceWithCustomer();
-			ExportDevicesExcel(ListCustomersDevicesWithCustomer);
+			ExcelReport.ExportDevicesExcel(ListCustomersDevicesWithCustomer);
 		}
 		
 		
-			void ExportDevicesExcel(List<Customer_device> ListCustomersDevices)
-			{
-				SaveFileDialog File = new SaveFileDialog{Filter = @"Excel (*.xls)|*.xls", FileName = "My WISP S. I. - Dispositivos de Clientes Registrados"};
-				
-				
-				if(File.ShowDialog() == DialogResult.OK)
-				{
-					Excel.Application ExcelApp = new Excel.Application();
-					Excel.Workbook ExcelBook = ExcelApp.Workbooks.Add();
-					Excel.Worksheet ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Sheets["Hoja1"];
-					Excel.Pictures MyLogo = (Microsoft.Office.Interop.Excel.Pictures)ExcelSheet.Pictures(System.Reflection.Missing.Value);
-					DateTime DateNow = DateTime.Now;
-					
-					Company MyCompany = CompanyBL.GetInformationCompany();
-					
-					String Logo = Convert.ToString(MyCompany.Image);
-					
-					MyLogo.Insert(Logo, ExcelSheet.Cells[1, "A"]);
-					
-					
-					ExcelSheet.Cells[1, "C"] = MyCompany.Name + "\r\n NIT: " + MyCompany.NIT + "\r\n" + MyCompany.City + " - " + MyCompany.Department + "\r\n Telefono: " + MyCompany.Phone + "\r\n E-mail: " + MyCompany.E_mail + "\r\n" + MyCompany.Website;
-					ExcelSheet.Range["A1", "H1"].Merge();
-					ExcelSheet.Range["A1", "H1"].Font.Bold = true;
-					ExcelSheet.Range["A1", "H1"].Font.Size = 12;
-					
-					ExcelSheet.Range["A2", "H1"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-					ExcelSheet.Range["A2", "H1"].VerticalAlignment = Excel.XlHAlign.xlHAlignCenter;
-					
-					ExcelSheet.Range["A1", "H1"].RowHeight = 110;
-					
-					
-					ExcelSheet.Cells[2, "D"] = "Listado de Dispositivos de Clientes Registrados - ["+DateNow+"]";
-					ExcelSheet.Range["A2", "H2"].Merge();
-					ExcelSheet.Range["A2", "H2"].Font.Bold = true;
-					ExcelSheet.Range["A2", "H2"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-					
-					ExcelSheet.Range["A3", "H3"].Font.Bold = true;
-					ExcelSheet.Cells[3, "A"] = "MAC";
-					ExcelSheet.Cells[3, "B"] = "Nombre";
-					ExcelSheet.Cells[3, "C"] = "IP";
-					ExcelSheet.Cells[3, "D"] = "Marca";
-					ExcelSheet.Cells[3, "E"] = "Tipo";
-					ExcelSheet.Cells[3, "F"] = "Version de Firmware";
-					ExcelSheet.Cells[3, "G"] = "Id de Instalacion";
-					ExcelSheet.Cells[3, "H"] = "Nombre del Cliente";
-					
-					int row = 3;
-					foreach(var device in ListCustomersDevices)
-					{
-						row++;
-						ExcelSheet.Cells[row, "A"] = device.MAC;
-						ExcelSheet.Cells[row, "B"] = device.Name_Device;
-						ExcelSheet.Cells[row, "C"] = device.IP_Device;
-						ExcelSheet.Cells[row, "D"] = device.Brand_Device;
-						ExcelSheet.Cells[row, "E"] = device.Type_Device;
-						ExcelSheet.Cells[row, "F"] = device.Firmware_Device;
-						ExcelSheet.Cells[row, "G"] = device.idInstalation_Device;
-						ExcelSheet.Cells[row, "H"] = device.CustomerOwner;
-					}
-					
-					ExcelSheet.Columns.AutoFit();
-					
-					ExcelBook.SaveAs(File.FileName, Excel.XlFileFormat.xlAddIn);
-					
-					ExcelApp.Quit();
-				
-					GC.Collect();
-				} 
-			}
 		void BtnRefreshClick(object sender, EventArgs e)
 		{
 			ReloadCustomerDeviceInDataTable();

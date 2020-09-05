@@ -97,81 +97,9 @@ namespace UI
 		{
 			List<Point_of_Sale> ListPointsOfSale = new List<Point_of_Sale>();
 			ListPointsOfSale = Point_of_SaleBL.GetAllPointsOfSale();
-			ExportPointOfSaleExcel(ListPointsOfSale);
+			ExcelReport.ExportPointOfSaleExcel(ListPointsOfSale);
 		}
 		
-		void ExportPointOfSaleExcel(List<Point_of_Sale> ListPointsOfSale)
-		{
-			SaveFileDialog File = new SaveFileDialog{Filter = @"Excel (*.xls)|*.xls", FileName = "My WISP S. I. - Puntos de Venta Registrados"};
-			
-			
-			if(File.ShowDialog() == DialogResult.OK)
-			{
-				Excel.Application ExcelApp = new Excel.Application();
-				Excel.Workbook ExcelBook = ExcelApp.Workbooks.Add();
-				Excel.Worksheet ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Sheets["Hoja1"];
-				Excel.Pictures MyLogo = (Microsoft.Office.Interop.Excel.Pictures)ExcelSheet.Pictures(System.Reflection.Missing.Value);
-				DateTime DateNow = DateTime.Now;
-				
-				Company MyCompany = CompanyBL.GetInformationCompany();
-				
-				String Logo = Convert.ToString(MyCompany.Image);
-				
-				MyLogo.Insert(Logo, ExcelSheet.Cells[1, "A"]);								
-				
-				
-				ExcelSheet.Cells[1, "C"] = MyCompany.Name + "\r\n NIT: " + MyCompany.NIT + "\r\n" + MyCompany.City + " - " + MyCompany.Department + "\r\n Telefono: " + MyCompany.Phone + "\r\n E-mail: " + MyCompany.E_mail + "\r\n" + MyCompany.Website;
-				ExcelSheet.Range["A1", "J1"].Merge();
-				ExcelSheet.Range["A1", "J1"].Font.Bold = true;
-				ExcelSheet.Range["A1", "J1"].Font.Size = 12;
-				
-				ExcelSheet.Range["A2", "J1"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				ExcelSheet.Range["A2", "J1"].VerticalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				
-				ExcelSheet.Range["A1", "J1"].RowHeight = 110;
-				
-				
-				ExcelSheet.Cells[2, "D"] = "Listado de Puntos de Venta Registrados - ["+DateNow+"]";
-				ExcelSheet.Range["A2", "J2"].Merge();
-				ExcelSheet.Range["A2", "J2"].Font.Bold = true;
-				ExcelSheet.Range["A2", "J2"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-				
-				ExcelSheet.Range["A3", "J3"].Font.Bold = true;
-				ExcelSheet.Cells[3, "A"] = "Id Punto de Venta";
-				ExcelSheet.Cells[3, "B"] = "Nombre";
-				ExcelSheet.Cells[3, "C"] = "Departamento";
-				ExcelSheet.Cells[3, "D"] = "Municipio";
-				ExcelSheet.Cells[3, "E"] = "Direccion";
-				ExcelSheet.Cells[3, "F"] = "Nombre del Encargado";
-				ExcelSheet.Cells[3, "G"] = "Telefono";
-				ExcelSheet.Cells[3, "H"] = "E-mail";
-				ExcelSheet.Cells[3, "I"] = "Cantidad de Pines Actual";
-				ExcelSheet.Cells[3, "J"] = "Prefijo Actual";
-				
-				int row = 3;
-				foreach(var pointofsale in ListPointsOfSale)
-				{
-					row++;
-					ExcelSheet.Cells[row, "A"] = pointofsale.IdPointOfSale;
-					ExcelSheet.Cells[row, "B"] = pointofsale.NamePoint;
-					ExcelSheet.Cells[row, "C"] = pointofsale.Department;
-					ExcelSheet.Cells[row, "D"] = pointofsale.Municipality;
-					ExcelSheet.Cells[row, "E"] = pointofsale.Address;
-					ExcelSheet.Cells[row, "F"] = pointofsale.NameOwner;
-					ExcelSheet.Cells[row, "G"] = pointofsale.Phone;
-					ExcelSheet.Cells[row, "H"] = pointofsale.E_mail;
-					ExcelSheet.Cells[row, "I"] = pointofsale.AmountCodes;
-					ExcelSheet.Cells[row, "J"] = pointofsale.PrefixCode;
-				}
-				
-				ExcelSheet.Columns.AutoFit();
-				
-				ExcelBook.SaveAs(File.FileName, Excel.XlFileFormat.xlAddIn);
-				
-				ExcelApp.Quit();
-				
-				GC.Collect();
-			} 
-		} 
+		
 	}
 }
