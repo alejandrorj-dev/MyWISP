@@ -104,7 +104,7 @@ Name_User varchar(45) not null,
 Password_User varchar(45) not null
 );
 
-insert into Users(First_Name, Last_Name, First_Surname, Last_Surname, Name_User, Password_User) values('Juan', 'José', 'Rodríguez', 'Jiménez', 'juan', MD5('1111'));
-insert into Company(NIT, Name_Company, City, Department, Address, Phone, E_mail, Website_Address, Image) values('900925948-1', 'E. T. D. EMPRESA DE TRANSMISION DE DATOS S. A. S.', 'Palmira', 'Valle del Cauca', 'diagonal 66 no. 33-25 barrio Zamorano', '5555-555', 'etdcentralpalmira@gmail.com', 'www.etd.com.co', '');
+insert into Users(First_Name, Last_Name, First_Surname, Last_Surname, Name_User, Password_User) values('My Name', '', 'My Lastname', '', 'myuser', MD5('1111'));
+insert into Company(NIT, Name_Company, City, Department, Address, Phone, E_mail, Website_Address, Image) values('000000000', 'My Company', 'City', 'Department/State', 'Address of the company', '5555-555', 'email@mycompany.com', 'www.mycompany.com', '');
 
 
